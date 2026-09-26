@@ -368,10 +368,8 @@
         ========================= */
 
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 300px;
-            gap: 24px;
+            columns: 3;
+            column-gap: 24px;
         }
 
         .gallery-item {
@@ -381,21 +379,18 @@
             box-shadow: var(--shadow-md);
             cursor: pointer;
             display: block;
+            break-inside: avoid;
+            margin-bottom: 24px;
         }
 
-        .gallery-item.tall {
-            grid-row: span 2;
-        }
-
-        .gallery-item .g-img {
-            position: absolute;
-            inset: 0;
-            background-size: cover;
-            background-position: center;
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
             transition: transform 0.6s ease;
         }
 
-        .gallery-item:hover .g-img {
+        .gallery-item:hover img {
             transform: scale(1.08);
         }
 
@@ -488,7 +483,7 @@
         .lightbox .lb-img {
             width: 100%;
             height: 60vh;
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             border-radius: var(--radius);
             box-shadow: var(--shadow-lg);
@@ -735,11 +730,6 @@
                 display: flex;
             }
 
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                grid-auto-rows: 260px;
-            }
-
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -765,8 +755,7 @@
             }
 
             .gallery-grid {
-                grid-template-columns: 1fr;
-                grid-auto-rows: 260px;
+                columns: 1;
             }
 
             .footer-grid {
@@ -862,75 +851,48 @@
         <div class="gallery-grid" id="galleryGrid">
 
             <a href="#" class="gallery-item reveal" data-img="images/1.jpeg" data-label="Placement & Recruitment">
-                <div class="g-img" style="background-image:url('images/1.jpeg');"></div>
+                <img src="images/1.jpeg" width="899" height="1599" alt="Placement & Recruitment">
                 <span class="g-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3M11 8v6M8 11h6"></path></svg></span>
-                <div class="gallery-caption">
-                    <span>Placement</span>
-                    <h3>Placement & Recruitment</h3>
-                </div>
             </a>
 
-            <a href="#" class="gallery-item tall reveal delay-1" data-img="images/2.jpeg" data-label="Education">
-                <div class="g-img" style="background-image:url('images/2.jpeg');"></div>
+            <a href="#" class="gallery-item reveal delay-1" data-img="images/2.jpeg" data-label="Education">
+                <img src="images/2.jpeg" width="960" height="1280" alt="Education">
                 <span class="g-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3M11 8v6M8 11h6"></path></svg></span>
-                <div class="gallery-caption">
-                    <span>Education</span>
-                    <h3>Education</h3>
-                </div>
             </a>
 
             <a href="#" class="gallery-item reveal delay-2" data-img="images/3.jpeg" data-label="Skill Education & Training">
-                <div class="g-img" style="background-image:url('images/3.jpeg');"></div>
+                <img src="images/3.jpeg" width="1280" height="960" alt="Skill Education & Training">
                 <span class="g-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3M11 8v6M8 11h6"></path></svg></span>
-                <div class="gallery-caption">
-                    <span>Training</span>
-                    <h3>Skill Education & Training</h3>
-                </div>
             </a>
 
             <a href="#" class="gallery-item reveal" data-img="images/4.jpeg" data-label="Finance">
-                <div class="g-img" style="background-image:url('images/4.jpeg');"></div>
+                <img src="images/4.jpeg" width="1599" height="906" alt="Finance">
                 <span class="g-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3M11 8v6M8 11h6"></path></svg></span>
-                <div class="gallery-caption">
-                    <span>Finance</span>
-                    <h3>Finance</h3>
-                </div>
             </a>
 
             <a href="#" class="gallery-item reveal delay-1" data-img="images/5.jpeg" data-label="Construction">
-                <div class="g-img" style="background-image:url('images/5.jpeg');"></div>
+                <img src="images/5.jpeg" width="1600" height="1204" alt="Construction">
                 <span class="g-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3M11 8v6M8 11h6"></path></svg></span>
-                <div class="gallery-caption">
-                    <span>Construction</span>
-                    <h3>Construction</h3>
-                </div>
             </a>
 
-            <a href="#" class="gallery-item tall reveal delay-2" data-img="images/6.jpeg" data-label="Trading">
-                <div class="g-img" style="background-image:url('images/6.jpeg');"></div>
+            <a href="#" class="gallery-item reveal delay-2" data-img="images/6.jpeg" data-label="Trading">
+                <img src="images/6.jpeg" width="1600" height="1200" alt="Trading">
                 <span class="g-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3M11 8v6M8 11h6"></path></svg></span>
-                <div class="gallery-caption">
-                    <span>Trading</span>
-                    <h3>Trading</h3>
-                </div>
             </a>
 
             <a href="#" class="gallery-item reveal" data-img="images/7.jpeg" data-label="Healthcare">
-                <div class="g-img" style="background-image:url('images/7.jpeg');"></div>
+                <img src="images/7.jpeg" width="1600" height="1200" alt="Healthcare">
                 <span class="g-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3M11 8v6M8 11h6"></path></svg></span>
-                <div class="gallery-caption">
-                    <span>Healthcare</span>
-                    <h3>Healthcare</h3>
-                </div>
             </a>
 
-            <a href="#" class="gallery-item reveal delay-1" data-img="images/1.jpeg" data-label="Manufacturing">
-                <div class="g-img" style="background-image:url('images/1.jpeg');"></div>
+            <a href="#" class="gallery-item reveal delay-1" data-img="images/9.jpeg" data-label="Manufacturing">
+                <img src="images/9.jpeg" width="1600" height="1200" alt="Manufacturing">
                 <span class="g-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3M11 8v6M8 11h6"></path></svg></span>
-                <div class="gallery-caption">
-                    <span>Manufacturing</span>
-                    <h3>Manufacturing</h3>
-                </div>
+            </a>
+
+            <a href="#" class="gallery-item reveal delay-2" data-img="images/10.jpeg" data-label="Trading">
+                <img src="images/10.jpeg" width="1600" height="1200" alt="Trading">
+                <span class="g-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3M11 8v6M8 11h6"></path></svg></span>
             </a>
 
         </div>
@@ -951,7 +913,6 @@
     <figure>
         <div class="lb-img" id="lbImg"></div>
         <figcaption>
-            <span id="lbLabel"></span>
             <span id="lbTitle"></span>
         </figcaption>
     </figure>
@@ -1108,8 +1069,8 @@
         current = index;
         const it = items[index];
         lbImg.style.backgroundImage = `url('${it.dataset.img}')`;
-        lbLabel.textContent = it.dataset.label || "";
-        lbTitle.textContent = it.querySelector("h3").textContent;
+        lbLabel.textContent = "";
+        lbTitle.textContent = it.dataset.label || "";
         lightbox.classList.add("open");
         document.body.style.overflow = "hidden";
     }
