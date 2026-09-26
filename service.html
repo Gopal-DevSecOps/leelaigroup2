@@ -682,6 +682,13 @@
            RESPONSIVE
         ========================= */
 
+        @media (max-width: 1000px) {
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 900px) {
 
             .nav-links {
@@ -696,6 +703,8 @@
                 display: none;
                 box-shadow: 0 20px 40px rgba(16, 45, 35, 0.12);
                 border-bottom: 1px solid var(--line);
+                max-height: calc(100vh - 76px);
+                overflow-y: auto;
             }
 
             .nav-links.active {
@@ -725,6 +734,15 @@
                 padding: 64px 20px;
             }
 
+            .navbar {
+                padding: 0 16px;
+            }
+
+            .phone {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+
             .section-title h2 {
                 font-size: 30px;
             }
@@ -739,6 +757,13 @@
 
             .footer-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .hero {
+                min-height: 480px;
             }
         }
     </style>
