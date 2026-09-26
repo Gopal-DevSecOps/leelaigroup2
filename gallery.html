@@ -458,6 +458,68 @@
             padding: 24px;
         }
 
+        /* Documents */
+        .docs-section {
+            background: var(--bg-soft);
+        }
+
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+        }
+
+        .doc-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .doc-thumb {
+            height: 240px;
+            width: 100%;
+            background: #eef0ea;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .doc-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .doc-card h3 {
+            font-size: 18px;
+            color: var(--green);
+            margin-bottom: 6px;
+            padding: 0 20px;
+        }
+
+        .doc-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 18px;
+            padding: 0 20px;
+        }
+
+        .doc-card .btn {
+            padding: 10px 22px;
+            font-size: 14px;
+        }
+
         .lightbox.open {
             display: flex;
         }
@@ -707,6 +769,10 @@
                 grid-auto-rows: 260px;
             }
 
+            .docs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -725,6 +791,10 @@
             .gallery-grid {
                 grid-template-columns: 1fr;
                 grid-auto-rows: 260px;
+            }
+
+            .docs-grid {
+                grid-template-columns: 1fr;
             }
 
             .footer-grid {
@@ -865,6 +935,49 @@
                     <h3>Finance</h3>
                 </div>
             </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATES & DOCUMENTS
+========================= -->
+
+<section class="section docs-section">
+
+    <div class="container">
+
+        <div class="section-title reveal">
+            <span>Our Facility</span>
+            <h2>Office & Facility</h2>
+            <p>
+                Our office and facility at Globe Business Park, Ambarnath West.
+            </p>
+        </div>
+
+        <div class="docs-grid">
+
+            <div class="doc-card reveal">
+                <div class="doc-thumb">
+                    <img src="document/Office_Factory_Photo_1.jpeg" alt="Office and facility photo">
+                </div>
+                <h3>Office & Facility</h3>
+                <p>Globe Business Park, Ambarnath West</p>
+                <a class="btn" href="document/Office_Factory_Photo_1.jpeg" target="_blank" rel="noopener">View</a>
+            </div>
+
+            <div class="doc-card reveal delay-1">
+                <div class="doc-thumb">
+                    <img src="document/Office_Factory_Photo_2.jpeg" alt="Office and facility photo">
+                </div>
+                <h3>Facility</h3>
+                <p>Office & facility photos</p>
+                <a class="btn" href="document/Office_Factory_Photo_2.jpeg" target="_blank" rel="noopener">View</a>
+            </div>
 
         </div>
 
